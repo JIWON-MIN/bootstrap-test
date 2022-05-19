@@ -1,8 +1,3 @@
-// modal이 열릴 때 input 요소가 focus 되도록
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-const emailInputEl = document.querySelector('#exampleInputEmail1');
-const modalEl = document.querySelector('#exampleModal');
-
-modalEl.addEventListener('shown.bs.modal', function(){
-  emailInputEl.focus();
-})
